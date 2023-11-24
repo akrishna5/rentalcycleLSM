@@ -1,0 +1,343 @@
+
+  /*===== GOOGLE FONTS =====*/
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+  /*===== VARIABLES CSS =====*/
+  :root {
+  
+      /*========== Colors ==========*/
+      --body-color: #020318;
+      --text-color-light: #FFF;
+  
+      /*========== Font and typography ==========*/
+      --body-font: 'Poppins', sans-serif;
+      --biggest-font-size: 2rem;
+      --h1-font-size: 1.5rem;
+      --normal-font-size: .938rem;
+      --smaller-font-size: .75rem;
+  
+      /*========== Box, Drop & Text Shadow ==========*/
+      --box-shadow-inset: inset 0 22px 56px -36px rgba(255, 255, 255, .5), 
+                          inset 0 4px 5px -4px rgba(255, 255, 255, 1), 
+                          inset 0 -31px 34px -32px rgba(96, 68, 144, .3), 
+                          inset 0 39px 50px -34px rgba(202, 172, 255, .3), 
+                          inset 0 2px 9px rgba(154, 146, 210, .3), 
+                          inset 0 1px 10px rgba(227, 222, 255, .2);
+  
+      --drop-shadow: 0 0 8px rgba(161, 165, 247, .8);
+  
+      --text-shadow: 0 0 8px rgba(161, 165, 247, .8);
+  
+      --box-shadow-inset-button: inset 0 2px 7px -9px rgba(255, 255, 255, .5), 
+                                 inset 0 1px 2px -1px rgba(255, 255, 255, 1), 
+                                 inset 0 -20px 16px -32px rgba(96, 68, 144, .3), 
+                                 inset 0 28px 25px -24px rgba(202, 172, 255, .3), 
+                                 inset 0 1px 4px rgba(154, 146, 210, .3), 
+                                 inset 0 1px 10px rgba(227, 222, 255, .2);
+  
+      /*========== Box, Drop & Text Shadow Hover ==========*/
+      --box-shadow-inset-hover: inset 0 19px 28px -18px rgba(255, 255, 255, .5), 
+                                inset 0 4px 6px -3px rgba(255, 255, 255, 1), 
+                                inset 0 -51px 44px -42px rgba(96, 68, 144, .3), 
+                                inset 0 59px 60px -32px rgba(202, 172, 255, .3), 
+                                inset 0 4px 16px rgba(154, 146, 210, .3), 
+                                inset 0 2px 25px rgba(227, 222, 255, .23);
+  
+      --drop-shadow-hover:  0 0 14px rgba(161, 165, 247, .8);
+  
+      --text-shadow-hover: 0 0 14px rgba(161, 165, 247, .8);
+  
+      --box-shadow-inset-button-hover: inset 0 4px 7px -4px rgba(255, 255, 255, .5), 
+                                       inset 0 1px 2px -1px rgba(255, 255, 255, 1), 
+                                       inset 0 -20px 16px -32px rgba(96, 68, 144, .3), 
+                                       inset 0 28px 25px -20px rgba(202, 172, 255, .3), 
+                                       inset 0 1px 4px rgba(154, 146, 210, .3), 
+                                       inset 0 1px 16px rgba(227, 222, 255, .2);
+                                       
+      /*========== Filter Blur ==========*/
+      --filter-blur: blur(100px);
+  }
+  .forming{
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      transform: translate(-50% -50%);
+      /* box-sizing: border-box; */
+      border-radius: 25px;
+      border: 4px solid white;
+      background: none;
+      /* transition: all 1s; */
+      font-size: 1em;
+      border-radius: 30px;
+      line-height: 30px;
+      background: none;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* transition: all 1s; */
+  
+  }
+  .forming::before{
+      content: "";
+      background: #ffffff;
+      position: absolute;
+      top: 4.6vh;
+      width: 10vw;
+      height: 10vh;
+      transform: perspective(1em) rotateX(35deg) scale(1,0.35);
+      filter: blur(1.75em);
+      /* opacity: 0.6; */
+  }
+  .forming:hover{
+      width: 35vw;
+      cursor: pointer;
+      box-shadow:0 0 51px white;
+  }
+  form:hover input{
+      display: block;
+      opacity: 0.8;
+  }
+  .forming:hover .fa-solid{
+      /* background: #1ea6fc; */
+      color: #ffffff;
+  }
+  .fa-solid{
+      padding: 10px;
+      width:42.5px;
+      height: 42.5px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      color: #1ea6fc;
+      text-align: center;
+      font-size: 1.2em;
+      transition: all 1s;
+  }
+  .forming > input{
+      outline: 0;
+      border: 0;
+      width: 30vw;
+      height: 42.5px;
+      padding: 0 20px;
+      width: 100%;
+      display: none;
+      opacity: 0;
+      border-radius: 10px;
+      background-color: rgb(2 3 24);
+      transition: all 1s;
+      color:white;
+  }
+  .search{
+      position: absolute;
+      /* right: 48%; */
+      top: 10vh;
+  }
+  @media screen and (min-width: 1024px) {
+  
+      :root {
+          --normal-font-size: 1rem;
+      }
+  }
+  
+  /*========== BASE ==========*/
+  *, ::before, ::after {
+      box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+      /* background-color: var(--body-color); */
+  }
+  
+  h1, p {
+      margin: 0;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  /*========== LAYAOUT ==========*/
+  .bd-container {
+      
+         /* margin-left: 1.5rem; */
+      /* margin-right: 1.5rem;*/
+  }
+  
+  /*========== CARD NEON ==========*/
+  .neon,
+  .neon__container{
+      /* flex-wrap: wrap;
+      display: flex; */
+      /* align-items: center; */
+  }
+  
+  .neon {
+      padding: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      position: absolute;
+      top: 25vh;
+      width: 70vw;
+  }
+  
+  .neon__container {
+      grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+      row-gap: 3.5rem;
+      column-gap: 2.5rem;
+  }
+  
+  .neon__card {
+      background: rgba(255, 255, 255, 0.01);
+      color: var(--text-color-light);
+      box-shadow: var(--box-shadow-inset);
+      backdrop-filter: var(--filter-blur);
+      padding: 3.5rem 1.5rem 2rem;
+      border-radius: 3rem;
+      margin-bottom: 2vw;
+      /* text-align: center; */
+      /* margin-right: 4px;*/
+  }
+  
+  .neon__icon {
+      width: 120px;
+      fill: var(--text-color-light);
+      filter: drop-shadow(var(--drop-shadow));
+      margin-bottom: .25rem;
+  }
+  
+  .neon__title, .neon__description {
+      text-shadow: var(--text-shadow);  
+  }
+  
+  .neon__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5vw;
+      word-break: break-word;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+  }
+  
+  .neon__description {
+      font-size: 1.5vw;
+      text-align: center;
+      /* text-align: initial; */
+      margin-bottom: 1.5rem;
+  }
+  
+  .neon__button-icon {
+      width: 1.2rem;
+      margin-left: .5rem;
+      fill: var(--text-color-light);
+      filter: drop-shadow(var(--drop-shadow));
+  }
+  
+  .neon__button {
+      box-shadow: var(--box-shadow-inset-button);
+      color: var(--text-color-light);
+      text-shadow: var(--text-shadow);
+      display: flex;
+      justify-content: center;
+      padding: 1.25rem;
+      border-radius: 1rem;
+      width: 15vw;
+      font-size: 1.75vw;
+  }
+  
+  .neon__button:hover {
+      box-shadow: var(--box-shadow-inset-button-hover);
+  }
+  
+  /* Card neon hover */
+  .neon__card:hover {
+      box-shadow: var(--box-shadow-inset-hover);
+  }
+  
+  .neon__card:hover .neon__icon {
+      filter: drop-shadow(var(--drop-shadow-hover));
+  }
+  
+  .neon__card:hover .neon__title,
+  .neon__card:hover .neon__description {
+      text-shadow: var(--text-shadow-hover);
+  }
+  
+  .neon__card, 
+  .neon__icon, 
+  .neon__title, 
+  .neon__description, 
+  .neon__button {
+      transition: .3s;
+      text-align: center;
+      /* font-size: 4vh;*/
+  }
+  
+  /*========== MEDIA QUERIES ==========*/
+  /* For small devices */
+  /* /* @media screen and (max-width: 359px) {
+      .neon__container {
+          grid-template-columns: 1fr;
+      }
+      .neon__card {
+          padding: 2rem 1rem 1.5rem;
+          border-radius: 2rem;
+      }
+      .neon__icon {
+          width: 80px;
+      }
+      .neon__title {
+          font-size: var(--h1-font-size);
+      }
+      .neon__description {
+          font-size: var(--smaller-font-size);
+      }
+      .neon__button {
+          padding: 1rem;
+          font-size: var(--smaller-font-size);
+          border-radius: .6rem;
+      }
+      .neon__button-icon {
+          width: 1rem;
+      }
+  }
+  
+  /* For long screens */
+  /* @media screen and (min-width: 1024px) {
+      .bd-container {
+          margin-left: 25%;
+          margin-right: auto;
+      }
+      .neon {
+          height: auto;
+      }
+  } */  
+  body{
+    /* overflow-x: hidden; */
+    overflow: scroll;
+}
+.wholepage{
+    /* height: 100vh; */
+    /* width:100vw; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+}
+.carding{
+    margin-right: 2vw;
+width: 20vw;
+/* height: 32%; */
+/* text-align: center; */
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}

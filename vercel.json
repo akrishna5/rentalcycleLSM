@@ -1,0 +1,10 @@
+{
+    "routes": [
+      { "src": "/", "dest": "/" },
+      { "src": "/login", "dest": "/" },
+      { "src": "/main/:reg", "dest": "/" },
+      { "src": "/renter/:reg", "dest": "/" },
+      { "src": "/rider", "dest": "/" },
+      { "src": "/rented/:reg", "dest": "/" }
+    ]
+  }
